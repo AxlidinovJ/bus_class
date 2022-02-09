@@ -40,9 +40,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => 'yii\grid\ActionColumn',
                 'template'=>"{view} {update} {delete}",
                 'buttons'=>[
-                    'delete'=>function($url,$model){
+                    'delete' => function($url,$model){
                         $m = "<i class='fas fa-trash'></i>";
-                        return Html::a($m,['meet/delete','id'=>$model->id],['title'=>"O'chirish"]);
+                        return Html::a($m,['meet/delete','id'=>$model->id],[
+                            'title'=>"O'chirish",
+                            'data'=>[
+                                'method' => 'POST',
+                                'confirm' => 'Test'
+                            ]
+                        ]);
                     }
                 ],
             ],

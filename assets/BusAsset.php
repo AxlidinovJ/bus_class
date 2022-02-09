@@ -41,7 +41,7 @@ class BusAsset extends AssetBundle
       "classic-business/js/script.js",
     ];
     public $depends = [
-        // 'yii\web\YiiAsset',
-        // 'yii\bootstrap4\BootstrapAsset',
+        'yii\web\YiiAsset',
+        'yii\bootstrap4\BootstrapAsset',
     ];
 }

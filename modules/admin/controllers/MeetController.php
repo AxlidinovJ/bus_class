@@ -17,20 +17,20 @@ class MeetController extends Controller
     
     
 
-    // public function behaviors()
-    // {
-    //     return array_merge(
-    //         parent::behaviors(),
-    //         [
-    //             'verbs' => [
-    //                 'class' => VerbFilter::className(),
-    //                 'actions' => [
-    //                     'delete' => ['POST'],
-    //                 ],
-    //             ],
-    //         ]
-    //     );
-    // }
+    public function behaviors()
+    {
+        return array_merge(
+            parent::behaviors(),
+            [
+                'verbs' => [
+                    'class' => VerbFilter::className(),
+                    'actions' => [
+                        'delete' => ['POST'],
+                    ],
+                ],
+            ]
+        );
+    }
 
     /**
      * Lists all Meet models.
